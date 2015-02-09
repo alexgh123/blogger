@@ -1,0 +1,29 @@
+<!-- <html>
+  <head>
+  </head>
+  <body>
+    hey
+  </body>
+</html>
+
+so I guess I don't need the html tags @begining and end of doc, because the below stuff is still rendering w/o it
+
+-->
+
+<h1>All Articles</h1>
+  <ul id="articles">
+    <% @articles.each do |article| %>
+      <li>
+        <!--
+          so before, we had:
+         <%= article.title %>
+          then we changed it to the below link_to text which is the same thing in html world as:
+            <a href="/articles/1">First Sample Article</a>
+       -->
+        <%= link_to article.title, article_path(article) %>
+      </li>
+
+      <% end %>
+  </ul>
+
+  <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
