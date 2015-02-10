@@ -1,0 +1,34 @@
+show tags here (see comments)
+<!-- this is where I would put the code to render the tags -->
+
+
+<h1>All Tags</h1>
+
+  <ul id="tags">
+
+    <% @tags.each do |tag| %>
+
+      <li>
+        <!--
+          so before, we had:
+
+
+         <%= tag.name %>
+
+          then we changed it to the below link_to text which is the same thing in html world as:
+            <a href="/articles/1">First Sample Article</a>
+       -->
+
+
+         <!-- so i need to have a link here to something
+
+       -->
+         link actually here
+         <%= link_to tag.title, article_path(tags) %>
+
+      </li>
+
+      <% end %>
+  </ul>
+
+  link to something here
