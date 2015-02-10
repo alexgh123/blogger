@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+  resources :tags #literally have no idea what this line does, but i know it helps establish the route for using the word tags in the app
 end
